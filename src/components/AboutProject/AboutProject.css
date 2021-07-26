@@ -1,0 +1,144 @@
+.project {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #202020;
+}
+
+.project__content {
+  width: calc(100% - 2 * 18px);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 70px;
+}
+
+.project__info-container {
+  margin: 60px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.project__text-container {
+  margin-bottom: 56px;
+}
+
+.project__text-container:last-of-type {
+  margin-bottom: 0;
+}
+
+.project__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.04em;
+  margin: 0 0 16px;
+}
+
+.project__text {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  margin: 0;
+}
+
+.project__block-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(100px, 140px) minmax(184px, 528px);
+  align-self: center;
+  justify-self: center;
+}
+
+.project__block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  background: #303030;
+}
+
+.project__block:first-child {
+  width: 100%;
+  background-color: #3ddc84;
+  color: black;
+}
+
+.project__block-comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  line-height: 13px;
+  margin-top: 10px;
+  color: #a0a0a0;
+}
+
+@media screen and (min-width: 768px) {
+  .project__content {
+    width: calc(100% - 2 * 50px);
+    padding-bottom: 90px;
+  }
+  .project__info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 70px 0 93px;
+  }
+  .project__text-container {
+    max-width: 319px;
+    margin: 0;
+  }
+
+  .project__block-container {
+    grid-template-columns: minmax(140px, 228px) minmax(528px, 1fr);
+  }
+
+  .project__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 22px;
+  }
+
+  .project__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .project__block {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .project__block-comment{
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 14px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .project__content {
+    width: calc(100% - 2 * 70px);
+    padding-bottom: 110px;
+  }
+  .project__info-container {
+    margin-bottom: 110px;
+  }
+
+  .project__text-container {
+    max-width: 550px;
+  }
+  .project__subtitle {
+    margin-bottom: 26px;
+  }
+
+  .project__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
