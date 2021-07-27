@@ -121,6 +121,13 @@
   }
 }
 
+@media screen and (min-width: 1000px) {
+  .project__text-container {
+    max-width: 480px;
+  }
+
+}
+
 @media screen and (min-width: 1280px) {
   .project__content {
     width: calc(100% - 2 * 70px);

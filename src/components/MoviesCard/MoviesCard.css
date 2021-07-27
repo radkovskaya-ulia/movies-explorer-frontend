@@ -40,7 +40,7 @@
 }
 
 .card__like-button {
-  background-image: url(../../images/like_active.svg);
+  background-image: url(../../images/like_disabled.svg);
   background-size: cover;
   background-color: transparent;
   border: none;

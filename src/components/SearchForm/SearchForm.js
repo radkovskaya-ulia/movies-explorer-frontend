@@ -23,6 +23,7 @@ function SearchForm() {
               name="filmname"
               className="searchform__input"
               placeholder="Фильм"
+              required
             />
           </div>
 

@@ -25,10 +25,16 @@ function AboutMe() {
               </p>
             </div>
             <div className="author__link-container">
-              <a className="author__link" href="https://www.facebook.com/julia.radkovskaya">
+              <a
+                className="author__link"
+                href="https://www.facebook.com/julia.radkovskaya"
+              >
                 Facebook
               </a>
-              <a className="author__link" href="https://github.com/radkovskaya-ulia">
+              <a
+                className="author__link"
+                href="https://github.com/radkovskaya-ulia"
+              >
                 Github
               </a>
             </div>

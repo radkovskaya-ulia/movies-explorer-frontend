@@ -121,7 +121,7 @@
   .header__content {
     width: calc(100% - 2 * 30px);
   }
-  
+
   .header__menu-button {
     background-size: 44px 44px;
   }

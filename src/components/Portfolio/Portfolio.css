@@ -50,11 +50,10 @@
   opacity: 0.5;
 }
 
-.portfolio__image{
+.portfolio__image {
   height: 28px;
   width: 18px;
 }
-
 
 @media screen and (min-width: 768px) {
   .portfolio {
@@ -73,7 +72,7 @@
     line-height: 50px;
   }
 
-  .portfolio__image{
+  .portfolio__image {
     height: 50px;
     width: 27px;
   }
@@ -92,7 +91,7 @@
     line-height: 50px;
   }
 
-  .portfolio__image{
+  .portfolio__image {
     height: 60px;
     width: 29px;
   }

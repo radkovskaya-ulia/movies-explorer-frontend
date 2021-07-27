@@ -7,7 +7,7 @@ import Navigation from "../Navigation/Navigation";
 import Profile from "../Profile/Profile";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
-import SavedMovies from "../SavedMovies/SavedMovies"
+import SavedMovies from "../SavedMovies/SavedMovies";
 import "./App.css";
 import NotFound from "../NotFound/NotFound";
 import InfoTooltip from "../InfoTooltip/InfoTooltip";
@@ -31,7 +31,7 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route exact path="/">
-              <Main/>
+              <Main />
             </Route>
             <Route path="/movies">
               <Movies onNavigationClick={handleNavigationClick} />
@@ -53,10 +53,7 @@ function App() {
             </Route>
           </Switch>
           <Navigation isOpen={isNagitionOpen} onClose={closeAllPopups} />
-          <InfoTooltip
-            isOpen={isInfoTooltipOpen}
-            onClose={closeAllPopups}
-          />
+          <InfoTooltip isOpen={isInfoTooltipOpen} onClose={closeAllPopups} />
         </BrowserRouter>
       </div>
     </div>

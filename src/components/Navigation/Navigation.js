@@ -15,13 +15,26 @@ function Navigation({ isOpen, onClose }) {
           aria-label="Кнопка закрытия меню навигации."
         ></button>
         <div className="navigation__link-container">
-          <NavLink activeClassName="navigation__link_active" className="navigation__link" exact to="/">
+          <NavLink
+            activeClassName="navigation__link_active"
+            className="navigation__link"
+            exact
+            to="/"
+          >
             Главная
           </NavLink>
-          <NavLink activeClassName="navigation__link_active" className="navigation__link" to="/movies">
+          <NavLink
+            activeClassName="navigation__link_active"
+            className="navigation__link"
+            to="/movies"
+          >
             Фильмы
           </NavLink>
-          <NavLink activeClassName="navigation__link_active" className="navigation__link" to="/saved-movies">
+          <NavLink
+            activeClassName="navigation__link_active"
+            className="navigation__link"
+            to="/saved-movies"
+          >
             Сохраненные фильмы
           </NavLink>
         </div>

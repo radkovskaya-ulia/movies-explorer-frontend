@@ -1,6 +1,6 @@
-.register{
+.register {
   padding-top: 56px;
-  width: calc(100% - 2*30px);
+  width: calc(100% - 2 * 30px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,13 +13,13 @@
   .register {
     align-items: flex-start;
     padding-top: 232px;
-    width: calc(100% - 2*186px)
+    width: calc(100% - 2 * 186px);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .register {
     padding-top: 70px;
-    width: calc(100% - 2*442px);
+    width: calc(100% - 2 * 442px);
   }
 }

@@ -37,7 +37,9 @@ function Profile({ onNavigationClick }) {
           <button type="submit" className="profile__button">
             Редактировать
           </button>
-          <Link className="profile__link" to="/signin">Выйти из аккаунта</Link>
+          <Link className="profile__link" to="/signin">
+            Выйти из аккаунта
+          </Link>
         </form>
       </div>
     </>
