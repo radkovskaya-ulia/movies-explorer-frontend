@@ -1,0 +1,159 @@
+.header {
+  display: flex;
+  padding: 18px 0;
+  justify-content: center;
+  width: 100%;
+}
+
+.header_green {
+  background-color: #073042;
+}
+
+.header__content {
+  width: calc(100% - 2 * 14px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__link_registration {
+  text-decoration: none;
+  color: white;
+  margin-right: 14px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.header__link_registration:hover {
+  opacity: 0.5;
+}
+
+.header__link-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 3px;
+  background-color: #3ddc84;
+  width: 54px;
+  height: 26px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.header__link-login:hover {
+  opacity: 0.5;
+}
+
+.header__movie-container {
+  display: none;
+}
+
+.header__link-movie {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0px 16px 0px 0px;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.header__link-movie:hover {
+  opacity: 0.5;
+}
+
+.header__link-movie:last-of-type {
+  margin-right: 0;
+}
+
+.header__link-account {
+  background-image: url(../../images/nav_profile.svg);
+  background-size: cover;
+  background-color: transparent;
+  width: 100px;
+  height: 30px;
+  display: none;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.header__link-account:hover {
+  opacity: 0.5;
+}
+
+.header__menu-button {
+  background-image: url(../../images/menu_button.svg);
+  background-size: 40px 43px;
+  background-repeat: no-repeat;
+  background-color: inherit;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+  width: 43px;
+  height: 40px;
+  border: none;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.header__menu-button:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .header__content {
+    width: calc(100% - 2 * 30px);
+  }
+
+  .header__menu-button {
+    background-size: 44px 44px;
+  }
+
+  .header__link-login {
+    width: 76px;
+    height: 32px;
+  }
+  .header__link_registration {
+    font-size: 12px;
+    line-height: 16px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__link-account {
+    display: flex;
+  }
+  .header__movie-container {
+    display: flex;
+  }
+
+  .header__menu-button {
+    display: none;
+  }
+
+  .header__content {
+    width: calc(100% - 2 * 70px);
+  }
+}
+
+.header__invisible {
+  display: none;
+}

@@ -1,0 +1,149 @@
+.author {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #202020;
+}
+
+.author__content {
+  width: calc(100% - 2 * 14px);
+  display: flex;
+  flex-direction: column;
+}
+
+.author__main-container {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.author__container {
+  margin-top: 40px;
+}
+
+.author__photo {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  width: 292px;
+  height: 352px;
+}
+
+.author__name {
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
+  letter-spacing: -0.04em;
+}
+
+.author__bio {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  margin: 20px 0;
+}
+
+.author__text {
+  font-size: 11px;
+  line-height: 16px;
+  margin: 0 0 20px;
+}
+
+.author__link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0 26px 0 0;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.author__link:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .author__content {
+    width: calc(100% - 2 * 50px);
+  }
+
+  .author__main-container {
+    margin-top: 66px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .author__container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .author__text-container {
+    max-width: 364px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .author__photo {
+    width: 255px;
+    height: 307px;
+  }
+
+  .author__name {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .author__bio {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 16px 0 20px;
+  }
+
+  .author__text {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  .author__link {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .author__content {
+    width: calc(100% - 2 * 70px);
+  }
+
+  .author__text-container {
+    max-width: 600px;
+  }
+
+  .author__photo {
+    width: 270px;
+    height: 327px;
+  }
+
+  .author__name {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .author__bio {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 18px 0 26px;
+  }
+
+  .author__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
