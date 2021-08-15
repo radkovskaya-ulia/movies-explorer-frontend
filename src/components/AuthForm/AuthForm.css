@@ -29,9 +29,19 @@
   border: none;
   background-color: #2f2f2f;
   border-radius: 8px;
-  margin-bottom: 20px;
   height: 46px;
   width: 260px;
+  margin: 10px 0 10px;
+}
+
+.auth__error{
+  font-size: 10px;
+  line-height: 12px;
+  color:red;
+}
+
+.auth__error_invisible{
+  display: None;
 }
 
 .auth__button {
@@ -48,6 +58,11 @@
   transition: opacity 0.3s ease;
   opacity: 1;
 }
+
+.auth__button_disabled{
+  background-color: slategrey;
+}
+
 
 .auth__button:hover {
   opacity: 0.5;
@@ -80,11 +95,11 @@
   opacity: 0.5;
 }
 
-.auth__form-input_login:last-of-type {
+.auth__form-label_login:last-of-type {
   margin-bottom: 267px;
 }
 
-.auth__form-input_register:last-of-type {
+.auth__form-label_register:last-of-type {
   margin-bottom: 179px;
 }
 
@@ -105,11 +120,11 @@
     width: 396px;
   }
 
-  .auth__form-input_login:last-of-type {
+  .auth__form-label_login:last-of-type {
     margin-bottom: 179px;
   }
 
-  .auth__form-input_register:last-of-type {
+  .auth__form-label_register:last-of-type {
     margin-bottom: 91px;
   }
 }

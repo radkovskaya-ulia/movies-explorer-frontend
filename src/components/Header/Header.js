@@ -3,7 +3,7 @@ import { Link, useRouteMatch } from "react-router-dom";
 import "./Header.css";
 import Logo from "../Logo/Logo";
 
-function Header({ onNavigationClick }) {
+function Header({ onNavigationClick, isLogin }) {
   const isMain = useRouteMatch({ path: "/", exact: true });
 
   return (
@@ -15,7 +15,7 @@ function Header({ onNavigationClick }) {
         <Logo />
         <div
           className={`header__login-container
-        ${isMain ? "" : "header__invisible"}`}
+          ${isLogin ? "header__invisible" : ""}`}
         >
           <Link className="header__link_registration" to="/signup">
             Регистрация
@@ -26,7 +26,7 @@ function Header({ onNavigationClick }) {
         </div>
         <div
           className={`header__movie-container
-          ${isMain ? "header__invisible" : ""}`}
+          ${isLogin ? "" : "header__invisible"}`}
         >
           <Link className="header__link-movie" to="/movies">
             Фильмы
@@ -37,12 +37,12 @@ function Header({ onNavigationClick }) {
         </div>
         <Link
           className={`header__link-account
-          ${isMain ? "header__invisible" : ""}`}
+          ${isLogin ? "" : "header__invisible"}`}
           to="/profile"
         ></Link>
         <button
           className={`header__menu-button
-          ${isMain ? "header__invisible" : ""}`}
+          ${isLogin ? "" : "header__invisible"}`}
           onClick={onNavigationClick}
         ></button>
       </div>

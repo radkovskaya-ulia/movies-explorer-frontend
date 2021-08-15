@@ -9,10 +9,10 @@ import Footer from "../Footer/Footer";
 
 import "./Main.css";
 
-function Main() {
+function Main({isLogin, onNavigationClick}) {
   return (
     <>
-      <Header />
+      <Header isLogin={isLogin} onNavigationClick={onNavigationClick}/>
       <main className="content">
         <Promo />
         <AboutProject />

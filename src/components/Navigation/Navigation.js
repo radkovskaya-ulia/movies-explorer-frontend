@@ -20,6 +20,7 @@ function Navigation({ isOpen, onClose }) {
             className="navigation__link"
             exact
             to="/"
+            onClick={onClose}
           >
             Главная
           </NavLink>
@@ -27,6 +28,7 @@ function Navigation({ isOpen, onClose }) {
             activeClassName="navigation__link_active"
             className="navigation__link"
             to="/movies"
+            onClick={onClose}
           >
             Фильмы
           </NavLink>
@@ -34,11 +36,16 @@ function Navigation({ isOpen, onClose }) {
             activeClassName="navigation__link_active"
             className="navigation__link"
             to="/saved-movies"
+            onClick={onClose}
           >
             Сохраненные фильмы
           </NavLink>
         </div>
-        <NavLink className="navigation__link-account" to="/profile"></NavLink>
+        <NavLink
+          className="navigation__link-account"
+          to="/profile"
+          onClick={onClose}
+        ></NavLink>
       </div>
     </div>
   );
