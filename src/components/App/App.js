@@ -138,7 +138,6 @@ function App() {
     localStorage.removeItem("searchMoviesCheck") 
     localStorage.removeItem("searchSavedMoviesPhrase");
     localStorage.removeItem("searchSavedMoviesCheck");
-    localStorage.setItem("savedMoviesFilteredcard", JSON.stringify(savedFilteredCards));
     setCards([])
     setSavedFilteredCards([])
     history.push("/signin");
@@ -217,7 +216,6 @@ function App() {
       .addCard(data)
       .then((data) => {
         setSavedCards([...savedCards, data.data]);
-        setSavedFilteredCards([...savedFilteredCards, data.data]);
       })
       .catch((err) => console.log(err.message));
   }
