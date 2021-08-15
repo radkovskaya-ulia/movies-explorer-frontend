@@ -16,7 +16,8 @@
 }
 
 .auth__form-label {
-  display: block;
+  display: flex;
+  flex-direction: column;
   font-size: 10px;
   line-height: 12px;
   max-width: 396px;

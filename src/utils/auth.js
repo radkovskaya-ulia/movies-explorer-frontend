@@ -1,4 +1,4 @@
-export const BASE_URL = "https://api.radkovskaya-diploma.nomoredomains.monster/";
+export const BASE_URL = "https://api.radkovskaya-diploma.nomoredomains.monster";
 
 const checkResponse = (response) => {
   return response.ok
