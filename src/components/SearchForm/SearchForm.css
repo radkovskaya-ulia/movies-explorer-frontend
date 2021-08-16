@@ -41,6 +41,10 @@
   opacity: 0.5;
 }
 
+.searchform__button_disabled{
+  opacity: 0.3;
+}
+
 .searchform__label {
   display: flex;
   flex-direction: row;
@@ -95,6 +99,16 @@
 .searchform__input-container {
   display: flex;
 }
+
+.searchform__input-error{
+  color:red;
+  margin:10px 0 0;
+}
+
+.searchform__input-error_invisible{
+  display: none;
+}
+
 
 @media screen and (min-width: 768px) {
   .searchform__form {

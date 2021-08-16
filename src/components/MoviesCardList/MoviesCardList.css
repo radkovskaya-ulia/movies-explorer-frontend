@@ -6,6 +6,10 @@
   align-items: center;
   flex-wrap: wrap;
 
+  
+}
+.card-list_invisible{
+  display: none;
 }
 
 .card__item-list {
@@ -39,6 +43,10 @@
 
 .card__more-button:hover {
   opacity: 0.5;
+}
+
+.card__more-button-invisible {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
