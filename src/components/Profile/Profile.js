@@ -61,6 +61,7 @@ function Profile({ onNavigationClick, isLogin, onUpdateUser, onLogout }) {
               onChange={handleChange}
             />
           </div>
+          
           <span className="profile__error" id="email-error">
             {errors.email || ""}
           </span>

@@ -25,12 +25,15 @@ function App() {
   const [numCards, setNumCards] = React.useState(0);
   const [loading, setLoading] = React.useState(false);
   const [infoMoviesMessage, setInfoMoviesMessage] = React.useState(false);
-  const [infoSavedMoviesMessage, setInfoSavedMoviesMessage] = React.useState(false);
+  const [infoSavedMoviesMessage, setInfoSavedMoviesMessage] =
+    React.useState(false);
   const [errorMoviesMessage, setErrorMoviesMessage] = React.useState(false);
   const [errorAuthMessage, setErrorAuthMessage] = React.useState(false);
   const [seachInputError, setSeachInputError] = React.useState(false);
   const [currentUser, setСurrentUser] = React.useState({});
   const [loggedIn, setLoggedIn] = React.useState(false);
+  const [infoEditProfileMessage, setInfoProfileMessage] = React.useState("");
+  const [isOpenProfileMessage, setOpenProfileMessage] = React.useState(false);
   const history = useHistory();
 
   const tokenCheck = () => {
@@ -51,8 +54,6 @@ function App() {
   React.useEffect(() => {
     tokenCheck();
   }, []);
-
-
 
   React.useEffect(() => {
     if (loggedIn) {
@@ -85,7 +86,7 @@ function App() {
         })
         .catch((err) => {
           console.log(err);
-        })
+        });
     }
   }, [loggedIn]);
 
@@ -94,8 +95,6 @@ function App() {
       history.push("/movies");
     }
   }, [loggedIn, history]);
-
-
 
   // Авторизация
   const onLogin = (data) => {
@@ -134,23 +133,30 @@ function App() {
   const onLogout = () => {
     setLoggedIn(false);
     localStorage.removeItem("jwt");
-    localStorage.removeItem("searchMoviesPhrase")
-    localStorage.removeItem("searchMoviesCheck") 
+    localStorage.removeItem("searchMoviesPhrase");
+    localStorage.removeItem("searchMoviesCheck");
     localStorage.removeItem("searchSavedMoviesPhrase");
     localStorage.removeItem("searchSavedMoviesCheck");
-    setCards([])
-    setSavedFilteredCards([])
+    setCards([]);
+    setSavedFilteredCards([]);
     history.push("/signin");
   };
 
   // Обновление профиля
   function handleUpdateUser(data) {
+    setInfoProfileMessage("");
     api
       .editProfile({ name: data.name, email: data.email })
       .then((data) => {
         setСurrentUser(data.data);
+        setIsisInfoTooltipOpen(true);
+        setInfoProfileMessage("Данные успешно обновлены");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        setIsisInfoTooltipOpen(true);
+        setInfoProfileMessage("Во время обновления данных произошла ошибка");
+        console.log(err);
+      });
   }
 
   //Клик на иконку навигации
@@ -206,7 +212,6 @@ function App() {
       );
     } else {
       return filerByNameCard;
-
     }
   }
 
@@ -281,13 +286,13 @@ function App() {
       );
       setCards(filteredCards);
       localStorage.setItem("filteredMoviesCard", JSON.stringify(filteredCards));
+      if (filteredCards.length === 0) {
+        setInfoMoviesMessage(true);
+      } else {
+        setInfoMoviesMessage(false);
+      }
+      handleSetNumCards();
     }
-    if (setCards.length === 0) {
-      setInfoMoviesMessage(true);
-    } else {
-      setInfoMoviesMessage(false);
-    }
-    handleSetNumCards();
   }
 
   // Рендер карточек сохраненных фильмов
@@ -376,13 +381,18 @@ function App() {
               isLogin={loggedIn}
               onUpdateUser={handleUpdateUser}
               onLogout={onLogout}
+              infoEditProfileMessage={infoEditProfileMessage}
             />
             <Route path="*">
-              {loggedIn ? <Redirect to="/movies"/> : <Redirect to="/signin"/>}
+              {loggedIn ? <Redirect to="/movies" /> : <Redirect to="/signin" />}
             </Route>
           </Switch>
           <Navigation isOpen={isNagitionOpen} onClose={closeAllPopups} />
-          <InfoTooltip isOpen={isInfoTooltipOpen} onClose={closeAllPopups} />
+          <InfoTooltip
+            isOpen={isInfoTooltipOpen}
+            onClose={closeAllPopups}
+            infoProfileMessage={infoEditProfileMessage}
+          />
         </CurrentUserContext.Provider>
       </div>
     </div>
