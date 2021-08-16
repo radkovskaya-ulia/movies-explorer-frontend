@@ -33,7 +33,6 @@ function App() {
   const [currentUser, setСurrentUser] = React.useState({});
   const [loggedIn, setLoggedIn] = React.useState(false);
   const [infoEditProfileMessage, setInfoProfileMessage] = React.useState("");
-  const [isOpenProfileMessage, setOpenProfileMessage] = React.useState(false);
   const history = useHistory();
 
   const tokenCheck = () => {
